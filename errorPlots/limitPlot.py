@@ -15,3 +15,7 @@ ax.set_ylabel('ok2')
 ax.set_title('Gaussian colored noise')
 
 plt.savefig("limited.pdf",bbox_inches='tight')
+
+import tikzplotlib
+# tikzplotlib.clean_figure()
+tikzplotlib.save("../latexPlot/plot.tex")

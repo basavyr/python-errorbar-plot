@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 
 # for Palatino and other serif fonts use:
+# plt.style.use("ggplot")
 rc('font', **{'family': 'serif', 'serif': ['Palatino']})
 rc('text', usetex=True)
-
 # test1
 x = [1, 2, 3, 4, 5]
 y = [0.59, 0.15, 0.77, 0.3, 0.78]
@@ -176,3 +176,7 @@ ax.set_title('Plot Title')
 ax.legend(ncol=4)
 ax.grid(axis='y', linestyle='--', color='silver')
 plt.savefig("multiple.pdf", bbox_inches='tight')
+
+import tikzplotlib
+# tikzplotlib.clean_figure()
+tikzplotlib.save("../latexPlot/plot.tex")
