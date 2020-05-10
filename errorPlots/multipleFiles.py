@@ -1,3 +1,4 @@
+import tikzplotlib
 import numpy as np
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
@@ -172,11 +173,10 @@ anno(text_Test6, pos_Test6, textpos_Test6, 'crimson')
 anno(text_Test7, pos_Test7, textpos_Test7, 'indigo')
 anno(text_Test8, pos_Test8, textpos_Test8, 'brown')
 
-ax.set_title('Plot Title')
+# ax.set_title('Plot Title')
 ax.legend(ncol=4)
 ax.grid(axis='y', linestyle='--', color='silver')
 plt.savefig("multiple.pdf", bbox_inches='tight')
 
-import tikzplotlib
 # tikzplotlib.clean_figure()
 tikzplotlib.save("../latexPlot/plot.tex")
